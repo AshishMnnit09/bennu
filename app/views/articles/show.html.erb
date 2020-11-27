@@ -1,0 +1,13 @@
+<p>Show page</p>
+<%= @article.title %>
+<%= @article.id %>
+<%= @article.text %>
+
+<h2>Comments</h2>
+<%= render 'comments/comment', :comments => @article.comments %>
+
+
+<h2>Add a comment:</h2>
+<%= render 'comments/form' %>
+
+<%= link_to 'edit', edit_article_path(@article) %>

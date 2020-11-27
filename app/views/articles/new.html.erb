@@ -1,0 +1,10 @@
+<%= @article %>
+
+<%#= form_with scope: :article, :action => :create, do |f| %>
+<%#= form_with scope: :article do |f| %>
+<%#= form_for @article do |f| %>
+<%= form_tag articles_path do %>
+  <%= text_field_tag "article[title]" %>
+  <%= text_field_tag "article[text]" %>
+  <%= submit_tag %>
+<% end %>
